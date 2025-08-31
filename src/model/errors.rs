@@ -8,7 +8,6 @@ pub struct Error {
 #[derive(Debug)]
 pub enum ErrorKind {
     Url(url::ParseError),
-    #[cfg(feature = "reqwest")]
     Http(reqwest::Error),
 }
 
